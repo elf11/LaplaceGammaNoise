@@ -4,10 +4,6 @@
 double gamma_rv(double shape, double scale, boost::mt19937& gen) {
 	boost::gamma_distribution<> gd(shape);
 
-	/*
-	boost::variate_generator<boost::mt19937&,boost::gamma_distribution<> > var_gamma( gen, gd );
-	*/
-
 	return scale * gd(gen);
 }
 
