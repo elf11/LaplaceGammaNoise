@@ -1,7 +1,7 @@
 CPPFLAGS=-std=c++11 -stdlib=libc++ -Weverything
 
 main: main.o gamma.o laplace.o random.o
-	clang++ $(CPPFLAGS) -o main main.o gamma.o laplace.o random.o
+	clang++ -o main main.o gamma.o laplace.o random.o
 
 main.o: main.cc
 	clang++ $(CPPFLAGS) -c main.cc
